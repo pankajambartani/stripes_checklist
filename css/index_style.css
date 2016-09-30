@@ -1,0 +1,204 @@
+/** resets **/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { height: 101%; }
+body { 
+  background: #f0f0f0 url('images/bg.gif'); 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #313131;
+  font-size: 62.5%; 
+  line-height: 1; 
+}
+
+::selection { background: #a4dcec; }
+::-moz-selection { background: #a4dcec; }
+::-webkit-selection { background: #a4dcec; }
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #ccc;
+  font-style: italic;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+  font-style: italic;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #ccc;
+  font-style: italic;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #ccc !important;
+  font-style: italic;  
+}
+
+br { display: block; line-height: 2.2em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; 
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+#topbar {
+  background: #007AA3;
+  height: 50px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
+
+#topbar h2 {
+  color: #FFFFFF;
+  font-size:2.3em;
+  line-height: 1.25em;
+  opacity: 0.8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#audit {
+  color: #FFFFFF;
+  font-size:1.8em;
+  position:absolute;
+  top:1.5em;
+  left: 40px;
+  opacity: 0.8;
+  font-weight: bold;
+}
+#audit:hover {
+  opacity: 1;
+}
+
+#logout {
+  color: #FFFFFF;
+  font-size:1.8em;
+  position:absolute;
+  top:1.5em;
+  right:2.5em;
+  opacity: 0.8;
+  font-weight: bold;
+}
+#logout:hover {
+  opacity: 1;
+}
+
+#modify {
+  color: #FFFFFF;
+  font-size:1.8em;
+  position:absolute;
+  top:1.5em;
+  right:9.5em;
+  opacity: 0.8;
+  font-weight: bold;
+}
+#modify:hover {
+  opacity: 1;
+}
+
+h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
+  line-height: 1.5em;
+  letter-spacing: -0.05em;
+  margin-bottom: 20px;
+  padding: .1em 0;
+  color: #444;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+h1:before,
+h1:after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 1px;
+  vertical-align: middle;
+  background: #f0f0f0;
+}
+h1:before {    
+  left: -.5em;
+  margin: 0 0 0 -50%;
+}
+h1:after {    
+  left: .5em;
+  margin: 0 -50% 0 0;
+}
+h1 > span {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.center { display: block; text-align: center; }
+
+/** page structure **/
+#w {
+  display: block;
+  width: 65%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+#content {
+  display: block;
+  width: 100%;
+  background: #fff;
+  padding: 50px 50px;
+  padding-top: 40px;
+  padding-bottom: 75px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+#content div {
+  width: 100%;
+  height: auto;
+  background-color: #f6f6f6;
+  font-size: 15px;
+}
+
+#content h2 {
+  font-size: 20px;
+  background-color: #f6f6f6;
+  color: #000000;
+}
+
+#content div h2:hover{
+  background-color: #60acc5;
+  border: #999999
+}
+
+#content div div :hover{
+  background-color: #60acc5;
+  border: #999999
+}

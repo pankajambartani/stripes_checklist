@@ -1,0 +1,204 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}{\f2\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red56\green9\blue229;\red31\green73\blue125;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\ul\b\f0\fs22 1. PCMSVC SPR derivation and Path creation\par
+\ulnone\b0\par
+\pard\fi-360\li720 1.\tab Derived the new SPR based on SPR derivation form?\par
+2.\tab Base lined the base SPR in PCMSVC?\par
+3.\tab If new path is requested? if then do the following?\par
+4.\tab Added the new SPR to IPM list?\par
+5.\tab Closed the previous SPR(IPM) if already exists?\par
+6.\tab While creating a Baseline, check if a baseline on the same SPR already exists. If yes incremental number used?. \par
+7.\tab Path status is changed from BASELINE state, to \~OPEN state?\par
+8.\tab Reviewed the path creation by another CM team member\par
+9.\tab Updated the main Sub volume in Build file? (#SET\~ MainSubvol\~ \\ATOM.$DON.J0611B)\par
+10.\tab Check-in the Build file in VCSCOM completed\par
+11.\tab Copied the files with tags in to the new sub volume?\par
+12.\tab Copied the all BUILD* files without tags?\par
+13.\tab fup alter\~ DICTODF, altfile (0, DICTALT) command executed from new sub volume?\par
+14.\tab Copied the CHANGES file explicitly to new sub volume?\par
+15.\tab Recorded output of all the above steps in Bugzilla?\par
+16.\tab Remarks\par
+\pard\par
+\ul\b 2. PCMSVC Build\par
+\pard\fi-360\li720\ulnone\b0 1.\tab Is the Tagline completed without error?\par
+2.\tab Is Install completed without error and captured the output and recorded?\par
+3.\tab Updated VPROC in SVER and SVER32(for H03 and above)?\par
+4.\tab Check the Build Request type (Production, PGO), steps will change"\par
+5.\tab Verified Build date and Errors in zzvcbrpt for zero error and current date?\par
+6.\tab Verified vproc of tdp2y,tdp2y32?\par
+7.\tab Is fmapdup executed(H03 and above)?\par
+8.\tab fup dup to \\ATOM.$dp2a21.T9053SPR(below J03)?\par
+9.\tab Is $dp2a21 location and vproc mentioned in mail?\par
+10.\tab Mail to Dev team for submittal confirmation with the fup duped location?\par
+11.\tab MSG file Updated in $dp2a21 location?\par
+12.\tab Submit to CRIS from Duped location"\par
+13.\tab submitted Fix sheet to QA queue and fix sheet disappeared from CM queue?\par
+14.\tab Update the Softdoc section with fix sheet info if applicable\par
+15.\tab Remarks\par
+\pard\par
+\pard\fi-360\li360\b 3.\tab\ul BASE VCSCOM Builds\par
+\pard\li720\ulnone\b0\par
+\pard\fi-360\li720 1.\tab Is the fixsheet/request has the required info?(Project,Path,Files to be merged, SPR,build step)\par
+2.\tab Is ENV output verified and recorded?\par
+3.\tab Is Trial merge output matches to the files present in fixsheet?\par
+4.\tab No merge conflict found during trial merge and resolved it if found\par
+5.\tab Is Actual merge completed and recorded the output?\par
+6.\tab Is Version info updated and checked in?\par
+7.\tab Is copy to sub volume completed and recorded the output?\par
+8.\tab Build Completed\par
+9.\tab Verified *** ERROR in zzvcbrpt?\par
+10.\tab Verified Total number of Errors(should be 0) in zzvcbrpt?\par
+11.\tab Is Vproc verified ?\cf1\par
+\cf0 12.\tab File code change is applicable and completed?\par
+13.\tab MSG file created?\par
+14.\tab Tech to DEV path sync (if applicable) completed?\par
+15.\tab Register both the TECH and DEV path\~ (if applicable) completed?\par
+16.\tab Archival (if applicable) completed?\par
+17.\tab Any deviation from above is recorded in remarks?\par
+18.\tab Is dev confirmed for CRIS submittal?\par
+19.\tab Is CRIS submittal completed and recorded the output?\par
+20.\tab Remarks\par
+\par
+\pard\ul\b 4. DEV & TECH concept Builds (FS)\par
+\cf2\ulnone\b0\f1\par
+\pard\fi-360\li720 1.\tab Is the New SPR derived from correct base?\par
+2.\tab Is milestone dates are given as per Derivation Request Form?\par
+3.\tab Is responsible users are selected as per request?\par
+4.\tab PSV Setup/Path/Branch are created for the new SPR (If applicable)?\par
+5.\tab VPROC is updated and checked-in before trail Build?\par
+6.\tab Communicated to requester/Dev Team with all new details?\par
+7.\tab Is the fixsheet/request has the required info?(Project,Path,Files to be merged, SPR,build step)\par
+8.\tab Is ENV (Project, Path & Volume) set correctly?\par
+9.\tab Registry is verified for TECH path (for new SPR Builds)?\par
+10.\tab Registry is verified for DEV path (for new SPR Builds)?\par
+11.\tab Is fixsheet review is done to get list of steps needs to be performed for this Build?\par
+12.\tab Is BUILD file modified? Then have you done the merge manually?\par
+13.\tab Developer path is frozen?\par
+14.\tab Is Trial merge done and verified against the fixsheet for list of modified files? \par
+15.\tab Is Actual merge completed and recorded the output?\par
+16.\tab Is Version info (Build date, VPROC..)updated and checked in?\par
+17.\tab Is copy to sub volume completed and recorded the output?\par
+18.\tab ENV is correct?\par
+19.\tab Is your Build initiated with the given options?\par
+20.\tab Is build completed and verified the errors in zzvcbrpt?\par
+21.\tab Verified Total number of Errors(should be 0) in zzvcbrpt?\par
+22.\tab Is Vproc verified for the built objects?\par
+23.\tab IS BFS Publish requested?\par
+24.\tab BFS Publish is completed?\par
+25.\tab Builds are initiated for all approved threads?\par
+26.\tab Communicated to developer with build locations for verification?\par
+27.\tab IS MSG file updated with VPROC info?\par
+28.\tab Submittal is done after Dev confirmation?\par
+29.\tab Merge is done from TECH to DEV path (for new SPR Builds)?\par
+30.\tab Registry is done for TECH path (for new SPR Builds)?\par
+31.\tab Registry is done for DEV path (for new SPR Builds)?\par
+32.\tab Dupper is completed (for new SPR Builds)?\par
+33.\tab Is fixsheet ftped to \\SIERRA.$FSTECH.TxxxxFIX\par
+34.\tab Is threadhistory spreadsheet updated with fixsheet info?\par
+35.\tab Notify developers that DEV path/thread locations have been updated\par
+36.\tab Any deviation from above is recorded in remarks?\par
+37.\tab Is CRIS submittal completed and recorded the output?\par
+38.\tab Remarks\par
+\cf0\f0\par
+\pard\cf1\par
+\cf0\ul\b PC build\par
+\pard\fi-360\li720\ulnone\b0 1.\tab Is the fixsheet/request has the required info?(Project,Path,Files to be merged, SPR,build step)\par
+2.\tab Is checkout performed/copied from right source code?\par
+3.\tab ENV kind output verified and recorded(if possible)?\par
+4.\tab Is Trial merge output matches to the files present in fixsheet?\par
+5.\tab No merge conflict found during trial merge and resolved it if found\par
+6.\tab Is Actual merge completed and recorded the output?\par
+7.\tab Is Version info updated and checked in?\par
+8.\tab Last build working directory cleaned or Moved?\par
+9.\tab Is checkout completed?\par
+10.\tab Build Completed\par
+11.\tab Is the source code is labelled?(if applicable)\par
+12.\tab Verified log for Errors?\par
+13.\tab Is Vproc verified ?\par
+14.\tab Is binary transferred for CRIS submittal?\par
+15.\tab Any deviation from above is recorded in remarks?\par
+16.\tab Is dev confirmed for CRIS submittal?\par
+17.\tab Is CRIS submittal completed and recorded the output?\par
+18.\tab Remarks\par
+\b 19.\tab\ul\par
+\pard StarTeam/SVN/GIT Branch creation and environment setup\par
+\pard\fi-360\li720\ulnone\b0 1.\tab Is the request has source and target branch details?\par
+2.\tab Is the type is Replicate/Child/Child-ParentMerge-child type?\par
+3.\tab If Child-ParentMerge-child\par
+\pard\fi-360\li1440 a.\tab Merge to parent completed and conflict(if any) resolved?\par
+b.\tab Is parent baseline(if applicable) completed?\par
+\pard\fi-360\li720 4.\tab Compared Source and target branches using StarTeam-compare option and report recorded?\par
+5.\tab Source and target is checked out and compared(???)\par
+\pard\par
+\par
+\ul\b VCSCOM Branch creation and environment setup\par
+\pard\fi-360\li720\ulnone\b0 1.\tab Is the request has source and target branch details?\par
+2.\tab Is auto create location is set (if applicable)\par
+3.\tab Is TAG naming convention changed(if applicable)?\par
+4.\tab Add path command Performed?\par
+5.\tab List path <path> output captured and verified?\par
+6.\tab Is version file modified(if applicable)?\par
+7.\tab If trail build is requested?\par
+\pard\fi-360\li1440 a.\tab Is copy to sub volume completed and recorded the output?\par
+b.\tab Build Completed\par
+c.\tab Verified *** ERROR in zzvcbrpt?\par
+d.\tab Verified Total number of Errors(should be 0) in zzvcbrpt?\par
+e.\tab Is Vproc verified ?\par
+\pard\li1440\par
+\pard\ul\b\par
+SPR derivation\ulnone\b0\par
+\pard\fi-360\li720 1.\tab Is SPR derivation form has all the info?\par
+2.\tab Is SPR derived from right base path? \par
+3.\tab Is file spec modification requested? If then\par
+\pard\fi-360\li1440 a.\tab Is file spec reviewed by Development team\par
+b.\tab\par
+\pard\ul\b CRIS Submittal\par
+\pard\fi-360\li720\ulnone\b0 1.\tab Is the request has location and SPR id?\par
+2.\tab Is MSG file modification (if applicable) completed?\par
+3.\tab Is SVC errors reported and resolved it by discussing with requester?\par
+4.\tab Is CRIS Success mail has the right location?\par
+5.\tab Is any new file state is \ldblquote Obtained from Cris\rdblquote ? \par
+\pard\fi-360\li1440 a.\tab if then discussed with dev and recorded the conversation?\par
+\pard\fi-360\li720 6.\tab Received CRIS mail?\par
+\pard\ul\b\par
+BFS Publish\par
+\pard\fi-360\li720\ulnone\b0 1.\tab Is the request has location and SIR id?\par
+2.\tab Received BFS mail?\par
+3.\tab IS BFS mail has right location?\par
+\pard\ul\b\par
+T number transition\par
+\pard\fi-360\li720\ulnone\b0 1.\tab T-number\par
+2.\tab Document received?\par
+3.\tab Is the source code received and accessible by generic account?\par
+4.\tab All the resources required to build is permanently available?\par
+5.\tab Able to build using the received document?\par
+6.\tab Is document updated in share point?\par
+7.\tab Is CM inventory portal updated with all data?\par
+\pard\li2880\ul\b\par
+\pard SUT Creation\par
+\pard\fi-360\li720\ulnone\b0 1.\tab All the SUT delay mails are addressed and ready for SUT creation?\par
+2.\tab Is SUTVER created and Submitted in CRIS with right SUT version?\par
+3.\tab Is trail populate completed without surprise?\par
+4.\tab Actual populate completed?\par
+5.\tab Received populate mail CRIS mail?\par
+6.\tab Create SUD initiated?\par
+7.\tab Send the SUT \ldblquote underway\rdblquote  mail?\par
+8.\tab Received SUD successful completion mail?\par
+9.\tab ESUTSH initiated with right input and recorded screenshot?\par
+10.\tab Fileinfo of all distribution systems(~8) verified?\par
+11.\tab Peruse of all distribution jobs(~8) verified recorded?\par
+12.\tab Populated the content XL sheet?\par
+13.\tab Send Delivery content mail?\par
+\pard\li720\ul\b\par
+\pard Softdoc revision creation\par
+\pard\fi-360\li720\ulnone\b0 1.\tab Is the request has the justification and revision date?\par
+2.\tab Is the mail from CRIS received?\par
+\pard\cf1\par
+\par
+\b\fs28 Toolkit build\par
+VSSCOM+PC build\par
+PC+VCSCOM build\b0\fs22\par
+\pard\fi-360\li720\cf0\par
+\pard\sa200\sl276\slmult1\lang9\f2\par
+}
+ 
